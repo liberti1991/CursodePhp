@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -41,9 +41,9 @@ main {
 }
 
 #navbar .nav-link {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
   font-size: 14px;
 }
 
@@ -100,7 +100,7 @@ main {
 
 .post-box .post-title a {
   color: #000;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .post-box .post-title a:hover {
@@ -167,30 +167,35 @@ main {
   grid-area: sidebar;
 }
 
-#tags-title, #categories-title {
+#tags-title,
+#categories-title {
   font-size: 24px;
   margin-bottom: 10px;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   padding: 10px;
   font-weight: 300;
 }
 
-#tag-list, #categories-list {
+#tag-list,
+#categories-list {
   list-style: none;
 }
 
-#tag-list li, #categories-list li {
+#tag-list li,
+#categories-list li {
   margin-bottom: 10px;
 }
 
-#tag-list a, #categories-list a {
+#tag-list a,
+#categories-list a {
   color: #666;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-#tag-list a:hover, #categories-list a:hover {
+#tag-list a:hover,
+#categories-list a:hover {
   color: #000;
 }
 
@@ -202,13 +207,12 @@ footer {
   bottom: 0;
   text-align: center;
   background-color: #000;
-  color: #FFF;
+  color: #fff;
   padding: 50px 0;
 }
 
 /* MOBILE */
-@media(max-width: 480px) {
-
+@media (max-width: 480px) {
   /* HOME */
   header {
     width: 100%;
@@ -245,12 +249,12 @@ footer {
   #post-container {
     grid-template-columns: 100%;
     padding: 15px;
-    grid-template-areas: "main"
-    "sidebar";
+    grid-template-areas:
+      "main"
+      "sidebar";
   }
 
   .img-container img {
     width: 100%;
   }
-
 }
