@@ -1,13 +1,14 @@
 <?php
 
-  $host = "localhost";
-  $user = "root";
-  $pass = "";
-  $db = "cursophp";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "cursophp";
 
-  $conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($host, $user, $pass, $db);
 
-  if($conn->connect_errno) {
-    echo "Erro na conexão! <br>";
-    echo "Erro: " . $conn->connect_error;
-  }
+if ($conn->connect_errno) {
+  echo "Erro na conexão! <br>";
+  echo "Erro: " . $conn->connect_error;
+  // echo "Erro: " . mysqli_connect_error();
+}
