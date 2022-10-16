@@ -29,8 +29,51 @@ if (!empty($data)) {
 
       $stmt->execute();
       $_SESSION['msg'] = "contato criado com sucesso!";
+    } catch (PDOException $e) {
+      $error = $e->getMessage();
+      echo "Erro: $error ";
+    }
+  } else if ($data["type"] ===  "edit") {
+
+    $name = $data['name'];
+    $phone = $data['phone'];
+    $observations = $data['observations'];
+    $id = $data['id'];
+
+    $query = "UPDATE contacts SET name = :name, phone = :phone, observations = :observations WHERE id = :id";
+
+    $stmt = $conn->prepare($query);
+
+    $stmt->bindParam(":name", $name);
+    $stmt->bindParam(":phone", $phone);
+    $stmt->bindParam(":observations", $observations);
+    $stmt->bindParam(":id", $id);
+
+    try {
+
+      $stmt->execute();
+      $_SESSION['msg'] = "contato atualizado com sucesso!";
+    } catch (PDOException $e) {
+      $error = $e->getMessage();
+      echo "Erro: $error ";
+    }
+  } else if ($data["type"] ===  "delete") {
+
+    $id = $data['id'];
+
+    $query = "DELETE FROM contacts WHERE id = :id";
+
+    $stmt = $conn->prepare($query);
+
+    $stmt->bindParam(":id", $id);
+
+    try {
+
+      $stmt->execute();
+      $_SESSION['msg'] = "contato removido com sucesso!";
       
     } catch (PDOException $e) {
+
       $error = $e->getMessage();
       echo "Erro: $error ";
     }
