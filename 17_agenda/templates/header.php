@@ -3,8 +3,9 @@
 include_once("config/url.php");
 include_once("config/process.php");
 
-// limpa a mensagem
-if (isset($_SESSION['msg'])) {
+//limpa a msg
+
+if (isset($_SESSION['msn'])) {
   $printMsg = $_SESSION['msg'];
   $_SESSION['msg'] = '';
 }
