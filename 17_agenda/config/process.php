@@ -29,6 +29,7 @@ if (!empty($data)) {
 
       $stmt->execute();
       $_SESSION['msg'] = "contato criado com sucesso!";
+      
     } catch (PDOException $e) {
       $error = $e->getMessage();
       echo "Erro: $error ";
