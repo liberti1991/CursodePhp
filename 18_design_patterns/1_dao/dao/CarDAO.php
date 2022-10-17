@@ -41,10 +41,12 @@ class CarDAO implements CarDAOInterface
 
     $stmt = $this->conn->prepare("INSERT INTO cars (brand, km, color) VALUES (:brand, :km, :color)");
 
+
     $stmt->bindParam(":brand", $car->getBrand());
     $stmt->bindParam(":km", $car->getKm());
     $stmt->bindParam(":color", $car->getColor());
 
     $stmt->execute();
+    
   }
 }
